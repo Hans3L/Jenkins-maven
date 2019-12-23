@@ -5,19 +5,17 @@ node {
         stages {
             stage('Build') {
                 steps {
-                    sh 'make'
+                    echo 'hola construye'
                 }
             }
             stage('Test') {
                 steps {
-                    sh 'make'
-                    sh 'time'
+                    echo 'Prueba'
                 }
 
             }
             stage('Deploy') {
-                sh 'make publish'
-                sh 'time'
+                echo 'despliegue'
             }
 
             stage 'Publish results'
