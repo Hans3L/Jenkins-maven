@@ -1,6 +1,25 @@
-#!groovy
+#! groovy
+pipeline{
+    agent any
 
-// Script //
-node {
-echo 'Hello World'
+    stages {
+        stage('Build'){
+            steps {
+                sh 'history'
+            }
+        }
+        stage('Test') {
+            steps {
+                 sh 'echo hola'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'mkdir deploy'
+                sh 'cd deploy'
+                sh 'touch nota.txt'
+                sh 'hello nota >> nota.txt'
+            }
+        }
+    }
 }
