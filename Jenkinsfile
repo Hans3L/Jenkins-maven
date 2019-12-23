@@ -18,7 +18,7 @@ pipeline{
                 sh 'mkdir deploy'
                 sh 'cd deploy'
                 sh 'touch nota.txt'
-                sh 'hello nota >> nota.txt'
+                sh 'echo hello nota >> nota.txt'
             }
         }
     }
